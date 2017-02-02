@@ -10,6 +10,10 @@
 
   <?= css('assets/css/index.css') ?>
 
+  <?php echo js('assets/js/jquery.js') ?>
+  <?php echo js('assets/js/jquery.mousewheel.min.js') ?>
+  <?php echo js('assets/js/script.js') ?>
+
 </head>
 <body>
 

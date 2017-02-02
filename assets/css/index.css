@@ -1,0 +1,241 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* +++++++++++++++++++++++++ END RESET.CSS ++++++++++++++++++++++ */
+
+
+
+html, body, .caroussel{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+body{
+	font-size:20px;
+}
+
+.cadre{
+	position: fixed;
+	box-sizing: border-box;
+	padding: 0.2rem 1rem;
+	background: #FFF;
+	/*border: solid 1px #AAA;*/
+}
+
+.cadre .colorBlock{
+	position: absolute;
+	top:1.8rem;
+	left: 1.85rem;
+	right: 0;
+	bottom: 0;
+}
+
+.cadre .content{
+	position: relative;
+
+}
+
+
+
+/* COULEUR DES BLOCS */
+#accueil .colorBlock{
+	background: #FFF;
+}
+
+#conf1 .colorBlock{
+	background: rgb(209, 255, 204);
+}
+
+#conf2 .colorBlock{
+	background: rgb(236, 185, 184);
+}
+
+#conf3 .colorBlock{
+	background: rgb(237, 210, 152);
+}
+
+#conf4 .colorBlock{
+	background: rgb(183, 169, 213);
+}
+
+#conf5 .colorBlock{
+	background: rgb(243, 239, 145);
+}
+
+#conf6 .colorBlock{
+	background: rgb(199, 199, 199);
+}
+
+#conf7 .colorBlock{
+	background: rgb(185, 221, 252);
+}
+
+#conf8 .colorBlock{
+	background: rgb(226, 155, 249);
+}
+
+#conf9 .colorBlock{
+	background: rgb(161, 233, 200);
+}
+
+
+/* POSITIONNEMENT RELATIF DES BLOCS */
+.cadre{
+	top:    0%;
+	left:   0%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1.9em;
+}
+.cadre+.cadre{
+	top:    1.5rem;
+	left:   2.5%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1.8em;
+}
+.cadre+.cadre+.cadre{
+	top:    3rem;
+	left:   5%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1.7em;
+}
+.cadre+.cadre+.cadre+.cadre{
+	top:    4.5rem;
+	left:   7.5%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1.6em;
+}
+.cadre+.cadre+.cadre+.cadre+.cadre{
+	top:    6rem;
+	left:   10%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1.5em;
+}
+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+	top:    7.5rem;
+	left:   12.5%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1.4em;
+}
+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+	top:    9rem;
+	left:   15%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1.3em;
+}
+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+	top:    10.5rem;
+	left:   17.5%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1.2em;
+}
+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+	top:    12rem;
+	left:   20%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1.1em;
+}
+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+	top:    13.5rem;
+	left:   22.5%;
+	right:  0%;
+	bottom: 0%;
+	font-size:1em;
+	/*background: #FFF!important;*/
+}
+
+
+/* CONTENU */
+
+.content{
+	max-width: 700px;
+}
+
+.content img{
+	max-width: 100%;
+	height: auto;
+}
+
+.content h1{
+	font-size: 3em;
+	margin-bottom: 1rem;
+}
+
+.content strong{
+	font-weight: bold;
+}
+
+.content p+p{
+	margin-top: 1rem;
+}
+
+@media screen and (max-width: 700px){
+
+	.cadre{
+		position: relative;
+		width:100% !important;
+		min-height: 50% !important;
+		height: auto !important;
+		margin: 0 !important;
+		font-size:1rem !important;
+		top:0 !important;
+		left: 0 !important;
+	}
+
+}

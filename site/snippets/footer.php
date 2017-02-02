@@ -1,4 +1,4 @@
-  <footer class="footer cf" role="contentinfo">
+  <!-- <footer class="footer cf" role="contentinfo">
     <div class="wrap wide">
 
       <p class="footer-copyright"><?php
@@ -12,7 +12,7 @@
       </p>
     
     </div>
-  </footer>
+  </footer> -->
 
 </body>
 </html>
