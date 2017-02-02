@@ -1,6 +1,9 @@
 title: Home
 
-pages: false
+pages:
+  template:
+    - default
+    - conference
 
 fields:
   title:

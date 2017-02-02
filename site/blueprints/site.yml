@@ -1,6 +1,10 @@
 title: Site
 
-pages: default
+pages:
+  template:
+    - default
+    - conference
+
 
 fields:
   title:

@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
-  <!-- <main class="main" role="main">
-    
+  <main class="main" role="main">
+
     <header class="wrap">
       <h1><?= $page->title()->html() ?></h1>
       <div class="intro text">
@@ -9,20 +9,11 @@
       </div>
       <hr />
     </header>
-
+      
     <div class="text wrap">
       <?= $page->text()->kirbytext() ?>
-    </div> -->
-  
-  <!--   <section class="projects-section">
-      
-      <div class="wrap wide">
-        <h2>Liste des conférences</h2> -->
-        <?php snippet('conferences', ['limit' => 3]) ?>
- <!--      </div>
-      
-    </section> -->
+    </div>
 
-  <!-- </main> -->
+  </main>
 
 <?php snippet('footer') ?>
