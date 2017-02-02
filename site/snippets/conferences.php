@@ -20,6 +20,8 @@
 				1 rue de l’Académie<br>
 				67082 Strasbourg</strong></p>
 			</div>
+
+			+ slideshow
 		</div>
     
 
