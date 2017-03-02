@@ -6,4 +6,23 @@ Year:
 
 ----
 
-Text: 
+Text: Enseignant-chercheur, directeur à la recherche de l’université de
+technologie de Compiègne.
+Ingénieur civil des Mines de Nancy en 1985, docteur en informatique
+de l’université Paris 6 en 1990, docteur en épistémologie
+de l’École polytechnique en 1996, habilité à diriger les recherches
+(université de technologie de Compiègne) en 2004.
+Après des recherches dans le domaine de l’intelligence artificielle en
+milieu médical (INSERM), Bruno Bachimont rejoint en 1998 l’Institut
+national de l’audiovisuel (Ina) où il dirige la recherche de 1999 à 2002.
+Il devient en 2002 enseignant-chercheur à l’université de technologie de
+Compiègne (UTC). Il y assume la direction à la recherche depuis 2006.
+Il fut conseiller scientifique à l’Ina de 2002 à 2012.
+Ses recherches portent sur trois objets : une philosophie de la technique
+et du numérique, pour comprendre en quoi nos connaissances et modes
+de pensée sont constitués, reconfigurés par la technique de manière
+générale et le numérique en particulier ; une approche du document et
+de la mémoire, pour articuler les possibles de la technique (ingénierie
+documentaire, préservation numérique) avec une phénoménologie de la
+mémoire et du passé ; et enfin les ontologies formelles, pour comprendre
+comment expliciter et formaliser les cadres conceptuels de notre pensée.
