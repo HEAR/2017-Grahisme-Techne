@@ -32,3 +32,5 @@ Icon
 !/_RECHERCHES/*
 
 .phpintel/*
+.phpintel/*/
+.phpintel/index
