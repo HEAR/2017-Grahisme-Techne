@@ -15,3 +15,4 @@ le design algorithmique.
 Il a donné de multiples workshops sur la programmation artistique
 pour divers associations, universités et écoles d’art. Il a participé en tant
 qu’artiste à de nombreuses expositions liées à l’art informatique. 
+

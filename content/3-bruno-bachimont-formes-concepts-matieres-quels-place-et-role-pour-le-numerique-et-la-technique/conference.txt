@@ -26,3 +26,16 @@ de la mémoire, pour articuler les possibles de la technique (ingénierie
 documentaire, préservation numérique) avec une phénoménologie de la
 mémoire et du passé ; et enfin les ontologies formelles, pour comprendre
 comment expliciter et formaliser les cadres conceptuels de notre pensée.
+
+Slideshow: 
+
+- 
+  slide: >
+    15003275_10154724697214931_3383279658447927329_o.jpg
+  start: 00:00:05:0
+  end: 00:00:07:0
+- 
+  slide: >
+    15003275_10154724697214931_3383279658447927329_o.jpg
+  start: 00:00:09:0
+  end: 00:00:10:0

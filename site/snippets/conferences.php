@@ -20,6 +20,17 @@
 				1 rue de l’Académie<br>
 				67082 Strasbourg</strong></p>
 			</div>
+
+
+
+			 <h1>Slideshow</h1>
+		    <ul>
+		    <?php foreach($item->slideshow()->toStructure() as $slide): ?>
+		      <li>
+		          <?php echo $slide->start()->text() ?> + <?php echo $slide->end()->text() ?>
+		      </li>
+		    <?php endforeach ?>
+		    </ul>
 		</div>
     
 

@@ -33,6 +33,9 @@ fields:
       slide:
         label: Slide image
         type: image
-      timecode:
-        label: Timecode (format hh:mm:ss)
+      start:
+        label: Timecode début (format hh:mm:ss:i)
+        type: text
+      end:
+        label: Timecode fin (format hh:mm:ss:i)
         type: text
