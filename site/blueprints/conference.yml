@@ -19,7 +19,7 @@ fields:
     label: Text
     type:  textarea
 
-  son:
+  video:
     label: Fichier de la captation
     type: url
 

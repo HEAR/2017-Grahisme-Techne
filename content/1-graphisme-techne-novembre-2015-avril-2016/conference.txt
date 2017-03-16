@@ -6,7 +6,7 @@ Year:
 
 ----
 
-Text: ok
+Text: texte de présentation
 
 ----
 
@@ -23,10 +23,14 @@ Slideshow:
 - 
   slide: >
     15003275_10154724697214931_3383279658447927329_o.jpg
-  start: 00:00:05:0
-  end: 00:00:07:0
+  start: 00:00:05:10
+  end: 00:00:07:23
 - 
   slide: >
     15003275_10154724697214931_3383279658447927329_o.jpg
   start: 00:00:09:0
   end: 00:00:10:0
+
+----
+
+Video: http://videos.mozilla.org/serv/webmademovies/popcornplug.mp4

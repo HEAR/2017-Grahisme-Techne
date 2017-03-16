@@ -19,18 +19,49 @@
 				Auditorium – HEAR à Strasbourg<br>
 				1 rue de l’Académie<br>
 				67082 Strasbourg</strong></p>
+
+				<video width="320" height="180" id="video-<?= $i ?>" controls>
+					<source src="<?= $item->video() ?>"></source>
+				</video>
 			</div>
 
 
+			
 
-			 <h1>Slideshow</h1>
+			<!-- http://mozilla.github.io/popcorn-docs/plugins/#image -->
+			<script>
+
+			/*			
+			var p = Popcorn( "#video-<?= $i ?>" )
+		    <?php foreach($item->slideshow()->toStructure() as $slide): ?>
+.image({
+		    	start : <?php snippet('timecode2seconds', ['timecode' => $slide->start()->text() ]) ?>,
+		    	end : <?php snippet('timecode2seconds', ['timecode' => $slide->end()->text() ]) ?>,
+		    	src: '<?= $slide->slide()->url() ?>'
+		    })
+		    <?php endforeach ?>
+.play();*/
+
+		    </script>
+
+
+		    <hr/>
+
+
+			<h1>Slideshow</h1>
 		    <ul>
 		    <?php foreach($item->slideshow()->toStructure() as $slide): ?>
 		      <li>
-		          <?php echo $slide->start()->text() ?> + <?php echo $slide->end()->text() ?>
+		          <?php snippet('timecode2seconds', ['timecode' => $slide->start()->text() ]) ?> + <?php snippet('timecode2seconds', ['timecode' => $slide->end()->text() ]) ?>
 		      </li>
 		    <?php endforeach ?>
 		    </ul>
+
+
+			
+
+
+
 		</div>
     
 
