@@ -1,28 +1,25 @@
 <?php snippet('header') ?>
 
-  <!-- <main class="main" role="main">
+
+<div class="cycles">
     
-    <header class="wrap">
-      <h1><?= $page->title()->html() ?></h1>
-      <div class="intro text">
-        <?= $page->intro()->kirbytext() ?>
-      </div>
-      <hr />
-    </header>
 
-    <div class="text wrap">
-      <?= $page->text()->kirbytext() ?>
-    </div> -->
-  
-  <!--   <section class="projects-section">
-      
-      <div class="wrap wide">
-        <h2>Liste des conférences</h2> -->
-        <?php snippet('conferences', ['limit' => 3]) ?>
- <!--      </div>
-      
-    </section> -->
+    <?php 
 
-  <!-- </main> -->
+    $i = 0;
+    foreach($pages->visible() as $cycle): ?>
+      
+
+    <div>
+        <h1><a href="<?= $cycle->url() ?>"><?= $cycle->title()->html() ?></a></h1>
+        <p>de <?= $cycle->from() ?> à <?= $cycle->to() ?></h3>
+        <?php echo $cycle->text()->kirbytext() ?>
+    </div>
+    
+
+    <?php endforeach ?>
+</div>
+
+
 
 <?php snippet('footer') ?>

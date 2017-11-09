@@ -4,6 +4,7 @@ pages:
   template:
     - default
     - conference
+    - cycle
 
 fields:
   title:

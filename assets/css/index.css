@@ -195,9 +195,15 @@ body{
 	top:    13.5rem;
 	left:   22.5%;
 	right:  0%;
-	bottom: 0%;
+	/*bottom: 0%;*/
 	font-size:1em;
 	/*background: #FFF!important;*/
+}
+
+.caroussel .cadre:last-child{
+	position: absolute;
+	bottom: auto;
+	height: auto;
 }
 
 

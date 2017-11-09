@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Graphisme Technè</title>
+	<link rel="stylesheet" href="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes" />
+
+	<style>
+		
+		html, body{
+			height: 100%;
+		}
+
+		body{
+			background: #000;
+		}
+	
+
+		.cadre{
+			position: absolute;
+			background: #FFF;
+			width:104px;
+			height:140px;
+			box-sizing: border-box;
+			padding: 5px;
+			top:0;
+			left:0;
+			box-shadow: rgba(0,0,0,0.1) 0px 10px 10px;
+		}
+
+		.conf{
+			width:400px;
+			height: 700px;
+			font-size: 30px;
+			background: #F00;
+			transform: scale(0.4);
+		}
+
+	</style>
+
+</head>
+
+
+<body>
+	<!-- <div class="conf">
+		Du texte
+	</div> -->
+
+	<div class="caroussel">
+		<div id="accueil" class="cadre">
+			conf 1 / Accueil
+		</div>
+		<div id="conf1" class="cadre">
+			conf 2
+		</div>
+		<div id="conf2" class="cadre">
+			conf 3
+		</div>
+		<div id="conf3" class="cadre">
+			conf 4
+		</div>
+		<div id="conf4" class="cadre">
+			conf 5
+		</div>
+		<div id="conf5" class="cadre">
+			conf 6
+		</div>
+		<div id="conf6" class="cadre">
+			conf 7
+		</div>
+		<div id="conf7" class="cadre">
+			conf 8
+		</div>
+		<div id="conf8" class="cadre">
+			conf 9
+		</div>
+		<div id="conf9" class="cadre">
+			conf 10
+		</div>
+	</div>
+
+	<script src="jquery.js"></script>
+	<script>
+	
+	$(document).ready(function(){
+
+		console.log('Graphisme technè');
+		
+
+		snakeInit( $('.cadre').last(), true );
+
+
+
+
+
+		// $(".cadre").each(function(){
+
+		// 	var x = Math.random() * ( $('body').width() - $(this).width() );
+		// 	x = Math.round(x/pasH)*pasH;
+
+		// 	var y = Math.random() * ( $('body').height() - $(this).height() );
+		// 	y = Math.round(y/pasV)*pasV;
+
+		// 	$(this).css('left', x );
+		// 	$(this).css('top', y );
+
+		// });
+
+
+		// https://github.com/jquery/jquery-mousewheel/
+		// defilement avec le scroll de la souris
+
+		// if($('body').width() > 700){
+
+			prevSlide();
+
+			// defilement avec les touches clavier
+			$('body').keydown(function(event){
+
+				console.log("touche n°",event.which);
+				if( event.which == 38 || event.which == 37 ){		// fleche du haut
+					nextSlide();
+					move(event.which );
+		            return false;
+		        }else if( event.which == 40 || event.which == 39){	// flèche du bas
+		        	prevSlide();
+		        	move(event.which );
+		            return false;
+		        }
+			});
+
+		// }
+	})
+
+	function snakeInit(item, first){
+
+		var pasH = 52;
+		var pasV = pasH;
+
+		if(first == true){
+
+			current = item;
+
+			var x = Math.random() * ( $('body').width() - $('.cadre').width() );
+			x = Math.round(x/pasH)*pasH;
+
+			var y = Math.random() * ( $('body').height() - $('.cadre').height() );
+			y = Math.round(y/pasV)*pasV;
+
+			item
+			.last()
+			.css('left', x )
+			.css('top', y );
+
+
+		}else{
+			var X = item.offset().left;
+			var Y = item.offset().top;
+
+			current = item.prev();
+
+			// console.log(current);
+
+			var directions = ["T","R","B","L"];
+			var dir = directions[Math.floor(Math.random() * directions.length)];
+
+			// console.log( dir );
+
+			switch(dir){
+				case "T" :
+					dirV = -pasV;
+					dirH = 0;
+				break;
+				case "R" :
+					dirV = 0;
+					dirH = pasH;
+				break;
+				case "B" :
+					dirV = pasV;
+					dirH = 0;
+				break;
+				case "L" :
+					dirV = 0;
+					dirH = -pasH;
+				break;
+				default:
+					dirV = 0;
+					dirH = -pasH;
+				break;
+			}
+
+
+			current
+			.css('left', X + dirH )
+			.css('top', Y + dirV );	
+
+		}
+
+		if(current.prev().hasClass("cadre")){
+			snakeInit(current,false);
+		}
+
+	}
+
+
+	function nextSlide(){
+		var test = $('.cadre').last().remove();
+		$('.caroussel').prepend(test);
+	}
+	function prevSlide(){
+		var test = $('.cadre').first().remove();
+		$('.caroussel').append(test);
+	}
+
+	function move(dir){
+		var pasH = 52;
+		var pasV = pasH;
+		
+		switch(dir){
+			case 38 :
+				dirV = -pasV;
+				dirH = 0;
+			break;
+			case 39 :
+				dirV = 0;
+				dirH = pasH;
+			break;
+			case 40 :
+				dirV = pasV;
+				dirH = 0;
+			break;
+			case 37 :
+				dirV = 0;
+				dirH = -pasH;
+			break;
+			default:
+				dirV = 0;
+				dirH = -pasH;
+			break;
+		}
+
+		// console.log( $('.cadre').last() , $('.cadre').last().prev() );
+
+		if(dir == 38 || dir == 37){
+			X = $('.cadre').first().offset().left;
+			Y = $('.cadre').first().offset().top;
+		}else{
+			X = $('.cadre').last().prev().offset().left;
+			Y = $('.cadre').last().prev().offset().top;
+		}
+		
+		$('.cadre').last()
+		.css('left', X + dirH )
+		.css('top', Y + dirV );	
+	}
+
+	</script>
+</body>
+</html>

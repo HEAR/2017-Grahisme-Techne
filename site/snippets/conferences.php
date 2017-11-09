@@ -4,7 +4,7 @@
     <?php 
 
     $i = 0;
-    foreach($pages->visible() as $item): ?>
+    foreach($page->children()->visible() as $item): ?>
       
 
     	<div id="conf<?php echo $i++; ?>" class="cadre">

@@ -2,8 +2,7 @@ title: Site
 
 pages:
   template:
-    - default
-    - conference
+    - cycle
 
 
 fields:
