@@ -11,32 +11,107 @@
 		
 		html, body{
 			height: 100%;
+			font-size:2.5vmin;
 		}
 
 		body{
 			background: #000;
+			margin: 0;
 		}
 	
+		h1,h2,h3,h4,h5,h6, p, span, ul, li{
+			font-weight: normal;
+			font-size: 1rem;
+			margin: 0;
+			padding: 0;
+			line-height: 1em;
+			list-style: none;
+			list-style-position: inside;
+		}
 
 		.cadre{
 			position: absolute;
 			background: #FFF;
-			width:104px;
+			/*width:104px;
 			height:140px;
 			box-sizing: border-box;
-			padding: 5px;
+			padding: 5px;*/
 			top:0;
 			left:0;
-			box-shadow: rgba(0,0,0,0.1) 0px 10px 10px;
+			/*box-shadow: rgba(0,0,0,0.1) 0px 10px 10px;*/
 		}
 
 		.conf{
-			width:400px;
-			height: 700px;
+			width:70.71vmin;
+			height: 100vmin;
 			font-size: 30px;
-			background: #F00;
-			transform: scale(0.4);
+			background: #FFF;
+			/*transform: scale(0.2);*/
+			/*position: relative;*/
+			z-index: 20;
+			text-align: center;
+			box-sizing: border-box;
+			padding: 4rem 2rem 1rem;
+			box-shadow: rgba(0,0,0,0.1) 0px 2rem 2rem;
+			transform-origin: top left;
 		}
+
+		.conf.full{
+			transform: translate(0,0) scale(1,1);
+		}
+
+		.conf .intervenant{
+			font-size: 2.5rem;
+		}
+
+		.conf .mention{
+			font-size: 0.6rem;
+			margin-top: 0.3rem;
+		}
+
+		.conf .calendrier span{
+			display: block;
+			margin-top: 0.3rem;
+		}
+
+		.conf .calendrier .jour{
+			font-size: 3.5rem;
+		}
+		.conf .calendrier .date{
+			font-size: 12rem;
+			line-height: 0.9em;
+		}
+		.conf .calendrier .mois{
+			font-size: 3.5rem;
+			line-height: 0.8em;
+		}
+
+		.conf .titre, .conf .info{
+			font-size: 1.9rem;
+			margin-top: 0.7rem;
+		}
+
+		.conf .recap{
+			text-align: left;
+			column-count: 3;
+			position: absolute;
+			bottom: 1rem;
+			left: 1rem;
+			width: calc(100% - 1rem);
+		}
+
+		.conf .recap h2{
+			break-after: column;
+		}
+
+		.conf .recap li{
+			font-size: 0.52rem;
+		}
+
+		.conf .recap li+li{
+			margin-top: 0.07rem;
+		}
+
 
 	</style>
 
@@ -44,55 +119,103 @@
 
 
 <body>
-	<!-- <div class="conf">
-		Du texte
-	</div> -->
+	
 
 	<div class="caroussel">
-		<div id="accueil" class="cadre">
+		<div id="accueil" class="cadre conf">
 			conf 1 / Accueil
 		</div>
-		<div id="conf1" class="cadre">
+		<div id="conf1" class="cadre conf">
 			conf 2
 		</div>
-		<div id="conf2" class="cadre">
+		<div id="conf2" class="cadre conf">
 			conf 3
 		</div>
-		<div id="conf3" class="cadre">
+		<div id="conf3" class="cadre conf">
 			conf 4
 		</div>
-		<div id="conf4" class="cadre">
+		<div id="conf4" class="cadre conf">
 			conf 5
 		</div>
-		<div id="conf5" class="cadre">
+		<div id="conf5" class="cadre conf">
 			conf 6
 		</div>
-		<div id="conf6" class="cadre">
+		<div id="conf6" class="cadre conf">
 			conf 7
 		</div>
-		<div id="conf7" class="cadre">
+		<div id="conf7" class="cadre conf">
 			conf 8
 		</div>
-		<div id="conf8" class="cadre">
+		<div id="conf8" class="cadre conf">
 			conf 9
 		</div>
-		<div id="conf9" class="cadre">
+		<!-- <div id="conf9" class="conf cadre">
 			conf 10
+		</div> -->
+		<div class="cadre conf">
+			<h1 class="intervenant">Krystian Sarkis</h1>
+			<h2 class="titre">A perspective on Arabic Type, Identity &amp; Culture</h2>
+			<p class="mention">(conférence en anglais)</p>
+			<p class="calendrier"><span class="jour">jeudi</span> <span class="date">30</span> <span class="mois">novembre</span></p>
+			<p class="info">Auditorium HEAR – 18h Strasbourg</p>
+			<div class="recap">
+				<h2>Graphisme technè</h2>
+				<ul>
+					<li>Kristyan Sarkis – 30.11.17</li>
+					<li>Pauline Thomas – 07.12.17</li>
+					<li>Max Bonhomme – 24.01.18</li>
+					<li>Etienne Robial – 31.01.18</li>
+					<li>David Bennewith – 08.02.18</li>
+					<li>Julien Priez – 08.03.18</li>
+					<li>Fabrice Sabatier – 15.03.18</li>
+					<li>Pierre-Damien Huyghe – 28.03.18</li>
+					<li>Rich Roat – 04.04.18</li>
+					<li>Pierre Ponant – 31.05.18</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
 	<script src="jquery.js"></script>
 	<script>
-	
+
+
+	Array.prototype.pick = function(){
+		return this[ Math.floor(Math.random() * this.length) ]
+	}
+
+
+	var pattern = [
+		["","TR","TR","TR","TR","TR","TR","TR","TR","TR","TR","TR"],
+		["","TR","TR","BR","BR","BR","BR","BR","BR","BR","BR","BR"],
+		["","BR","BR","BR","BR","BR","BR","BR","BR","BR","BR","BR"],
+		["","BR","BR","BR","BR","BR","BR","BR","TR","TR","TR","TR"],
+		["","BR","BR","BR","BR","BR","TR","TR","TR","TR","TR","TR"],
+		["","BR","BR","BR","BR","TR","TR","TR","TR","TR","TR","TR"],
+		["","BL","BL","BL","BL","BL","BL","BR","BR","BR","BR","BR"],
+		["","BL","BL","BL","BL","BL","TL","TL","TL","TL","TL","TL"],
+		["","BL","BL","BL","BL","BL","BR","BR","BR","BR","BR","BR"],
+		["","BL","BL","BL","BR","BR","BR","BR","BR","BR","BR","BR"]
+	];
+
+	var coords = [];
+
 	$(document).ready(function(){
 
 		console.log('Graphisme technè');
+
+		// console.log( pattern.pick() );
+
+		startPattern = pattern.pick() ;
+		blocID = 0;
 		
 
 		snakeInit( $('.cadre').last(), true );
 
-
-
+		$(".conf").click(function(e){
+			console.log("ok");
+			$(this).toggleClass("full");
+		})
 
 
 		// $(".cadre").each(function(){
@@ -119,13 +242,13 @@
 			// defilement avec les touches clavier
 			$('body').keydown(function(event){
 
-				console.log("touche n°",event.which);
-				if( event.which == 38 || event.which == 37 ){		// fleche du haut
-					nextSlide();
+				// console.log("touche n°",event.which);
+				if( event.which == 38 || event.which == 37 ){		// fleche du haut & gauche
+					prevSlide();
 					move(event.which );
 		            return false;
-		        }else if( event.which == 40 || event.which == 39){	// flèche du bas
-		        	prevSlide();
+		        }else if( event.which == 40 || event.which == 39){	// flèche du bas & droite
+		        	nextSlide();
 		        	move(event.which );
 		            return false;
 		        }
@@ -136,26 +259,39 @@
 
 	function snakeInit(item, first){
 
-		var pasH = 52;
+		var coef = 2;
+		var pasH = 52/coef;
 		var pasV = pasH;
+
+		// console.log(startPattern);
+
 
 		if(first == true){
 
 			current = item;
 
-			var x = Math.random() * ( $('body').width() - $('.cadre').width() );
+			var x = Math.random() * ( $('body').width() - $('.cadre').width()*0.2 );
 			x = Math.round(x/pasH)*pasH;
 
-			var y = Math.random() * ( $('body').height() - $('.cadre').height() );
+			var y = Math.random() * ( $('body').height() - $('.cadre').height()*0.2 );
 			y = Math.round(y/pasV)*pasV;
+
+			// item
+			// .last()
+			// .css('left', x )
+			// .css('top', y );
 
 			item
 			.last()
-			.css('left', x )
-			.css('top', y );
+			.css('transform', 'translate('+x+'px,'+y+'px) scale(0.2)' )
+
+			coords.unshift( [x,y] );
+			// console.log( coords );
 
 
 		}else{
+			// console.log(startPattern[blocID]);
+
 			var X = item.offset().left;
 			var Y = item.offset().top;
 
@@ -163,42 +299,59 @@
 
 			// console.log(current);
 
-			var directions = ["T","R","B","L"];
-			var dir = directions[Math.floor(Math.random() * directions.length)];
+			// var directions = ["T","R","B","L"];
+			// var dir = directions[Math.floor(Math.random() * directions.length)];
+
+			dir = startPattern[ blocID ];
+
+			// console.log(blocID, dir);
+
+			rPasV = Math.ceil(Math.random()*coef) * pasV;
+			rPasH = Math.ceil(Math.random()*coef) * pasH;
 
 			// console.log( dir );
 
 			switch(dir){
-				case "T" :
-					dirV = -pasV;
-					dirH = 0;
+				case "TR" :
+					dirV = -rPasV;
+					dirH = rPasH;
 				break;
-				case "R" :
-					dirV = 0;
-					dirH = pasH;
+				case "BR" :
+					dirV = rPasV;
+					dirH = rPasH;
 				break;
-				case "B" :
-					dirV = pasV;
-					dirH = 0;
+				case "BL" :
+					dirV = rPasV;
+					dirH = -rPasH;
 				break;
-				case "L" :
-					dirV = 0;
-					dirH = -pasH;
+				case "TL" :
+					dirV = -rPasV;
+					dirH = -rPasH;
 				break;
 				default:
-					dirV = 0;
-					dirH = -pasH;
+					dirV = rPasV;
+					dirH = rPasH;
 				break;
 			}
 
+			X = X + dirH ;
+			Y = Y + dirV ;
+			
+
+			// current
+			// .css('left', X )
+			// .css('top', Y );
 
 			current
-			.css('left', X + dirH )
-			.css('top', Y + dirV );	
+			.css('transform', 'translate('+X+'px,'+Y+'px) scale(0.2)' );
+
+			coords.unshift( [X,Y] );
 
 		}
 
 		if(current.prev().hasClass("cadre")){
+			blocID++;
+
 			snakeInit(current,false);
 		}
 
@@ -206,54 +359,99 @@
 
 
 	function nextSlide(){
-		var test = $('.cadre').last().remove();
-		$('.caroussel').prepend(test);
+		var temp = $('.cadre').first().remove();
+		$('.caroussel').append(temp);
 	}
 	function prevSlide(){
-		var test = $('.cadre').first().remove();
-		$('.caroussel').append(test);
+		var temp = $('.cadre').last().remove();
+		$('.caroussel').prepend(temp);
 	}
 
 	function move(dir){
-		var pasH = 52;
+
+		// console.log(coords);
+
+		var coef = 2;
+		var pasH = 52/coef;
 		var pasV = pasH;
+
+		rPasV = Math.ceil(Math.random()*coef) * pasV;
+		rPasH = Math.ceil(Math.random()*coef) * pasH;
 		
 		switch(dir){
-			case 38 :
-				dirV = -pasV;
-				dirH = 0;
+			case 38 : // haut // next
+				dirH = -rPasH;
+				dirV = -rPasV;
 			break;
-			case 39 :
-				dirV = 0;
-				dirH = pasH;
+			case 39 : // droite // Prev
+				dirH = rPasH;
+				dirV = -rPasV;
 			break;
-			case 40 :
-				dirV = pasV;
-				dirH = 0;
+			case 40 : // bas // prev
+				dirH = rPasH;
+				dirV = rPasV;
 			break;
-			case 37 :
-				dirV = 0;
-				dirH = -pasH;
+			case 37 : // gauche // next 
+				dirH = -rPasH;
+				dirV = rPasV;
 			break;
 			default:
-				dirV = 0;
-				dirH = -pasH;
+				dirH = rPasH;
+				dirV = rPasV;
 			break;
 		}
 
 		// console.log( $('.cadre').last() , $('.cadre').last().prev() );
 
 		if(dir == 38 || dir == 37){
+			// next
 			X = $('.cadre').first().offset().left;
 			Y = $('.cadre').first().offset().top;
+
+			X += dirH;
+			Y += dirV;
+
+			X = X < 0 ? 0 : X;
+			Y = Y < 0 ? 0 : Y;
+
+			coords.unshift([X,Y]);
+			coords.pop();
 		}else{
+			// prev
 			X = $('.cadre').last().prev().offset().left;
 			Y = $('.cadre').last().prev().offset().top;
+
+			X += dirH;
+			Y += dirV;
+
+			X = X < 0 ? 0 : X;
+			Y = Y < 0 ? 0 : Y;
+
+			coords.push([X,Y]);
+			coords.shift();
+		}
+
+		// var X = X + dirH;
+		// var Y = Y + dirV;
+
+		// console.log( coords );
+
+		for(var i=0; i<coords.length; i++){
+			// $('.cadre').eq( i )
+			// .css('left', coords[i][0] )
+			// .css('top', coords[i][1] );	
+
+			$(".cadre").eq(i)
+			.css('transform', 'translate('+coords[i][0]+'px,'+coords[i][1]+'px) scale(0.2)' );
 		}
 		
-		$('.cadre').last()
-		.css('left', X + dirH )
-		.css('top', Y + dirV );	
+		// $('.cadre').last()
+		// .css('left', X )
+		// .css('top', Y );	
+
+		window.scrollTo(document.body.scrollWidth, document.body.scrollHeight);
+
+
 	}
 
 	</script>
