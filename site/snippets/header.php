@@ -8,23 +8,21 @@
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
   <meta name="description" content="<?= $site->description()->html() ?>">
 
-  <?= css('assets/css/index.css') ?>
+  <!-- <?= css('assets/css/index.css') ?> -->
+  
+  <?= css( $page->url() .'/'.$page->css()->value() )?>
+
+
 
   <?= js('assets/js/jquery.js') ?>
-  <?= js('assets/js/jquery.mousewheel.min.js') ?>
-  <?= js('assets/js/popcorn/popcorn.js') ?>
+  <!-- <?= js('assets/js/jquery.mousewheel.min.js') ?> -->
+  <!-- <?= js('assets/js/popcorn/popcorn.js') ?> -->
 
-  <?= js('assets/js/script.js') ?>
+  <!-- <?= js('assets/js/script.js') ?> -->
+
+  <?= js( $page->url() .'/'.$page->js()->value() ) ?>
 
 </head>
 <body>
 
-  <!-- <header class="header wrap wide" role="banner">
-    <div class="grid">
-
-      <div class="branding column">
-        <a href="<?= url() ?>" rel="home"><?= $site->title()->html() ?></a>
-      </div>
-
-    </div>
-  </header> -->
+  

@@ -1,34 +1,54 @@
 title: Cycle
 
 pages:
+  # sortable: true
   template:
     - conference
+  sort: date asc
+  num: date
 
 fields:
   title:
-    label: Title
+    label: Titre
+    type:  text
+
+  soustitre:
+    label: Sous-titre
     type:  text
 
   text:
-    label: Text
+    label: Texte
     type:  textarea
 
   from:
-    label: date de début
+    label: Date de début
     type: date
     width: 1/2
 
   to:
-    label: date de fin
+    label: Date de fin
     type: date
     width: 1/2
 
-  javascript:
-    label: fichier javascript pour l'affichage
-    type: text
-    width: 1/2
-
   css:
-    label: fichier css pour l'affichage
-    type: text
     width: 1/2
+    label: Fichier CSS
+    type: select 
+    options: query
+    query:
+      fetch: code
+      value: '{{filename}}'
+      text: '{{filename}}'
+      flip: true
+
+  js:
+    width: 1/2
+    label: Fichier JS
+    type: select 
+    options: query
+    query:
+      fetch: code
+      value: '{{filename}}'
+      text: '{{filename}}'
+      flip: true
+
