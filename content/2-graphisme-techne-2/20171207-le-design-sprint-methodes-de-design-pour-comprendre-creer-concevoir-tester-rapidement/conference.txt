@@ -34,8 +34,8 @@ Recapitulatif: 1
 
 ----
 
-Text: 
+Text: Cette conférence sera l’occasion d’évoquer l’émergence de nouveaux métiers liés au design numérique comme le user experience design ainsi que les nouveaux processus de travail engendrés par une spécialisation et une technicisation croissante. Les questions liées aux techniques et méthodes de travail chez les petits et grands acteurs de l’économie numérique seront abordées à travers l’exemple du design sprint, méthode de travail mise en place chez Google.
 
 ----
 
-Bio: 
+Bio: D’abord artiste photographe, sortie de l’école Les Gobelins et de l’École nationale supérieure des arts décoratifs, Pauline Thomas expose à Paris, Londres, Sydney, New York, Berlin, Venise... Après quatre années passées chez Adobe, elle est aujourd’hui UX designer indépendante, Google Design Expert et Sprint Master. Elle anime également des formations UX pour les professionnels des agences digitales et les étudiants des Gobelins, Strate College, Université Paris Est, Penninghen. Elle accompagne les start-ups des programmes d’incubation Sprint de Numa et Google Launchpad. L’utilisateur et/ou le spectateur sont au centre de sa pratique professionnelle et artistique: créer un lieu pour permettre aux freelances de trouver les ressources nécessaires pour être plus heureux, productifs, responsables et passionnés au travail était devenu une nécessité à son retour en France. Elle a alors fondé le Laptop, l’un des premiers espaces de coworking à Paris.

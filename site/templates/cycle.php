@@ -16,7 +16,7 @@
 	$i = 0;
 	foreach($page->children()->visible() as $item): ?>
 
-	<div id="conf<?php echo $i++; ?>" class="cadre">
+	<div id="conf<?php echo $i++; ?>" class="cadre" data-date="<?= $item->date() ?>">
 
 		<div class="colorBlock"></div>
 		<div class="content">
