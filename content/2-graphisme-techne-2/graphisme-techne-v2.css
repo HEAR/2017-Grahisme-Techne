@@ -19,6 +19,7 @@ h1,h2,h3,h4,h5,h6, p, span, ul, li{
 }
 
 .cadre{
+	cursor:pointer;
 	position: absolute;
 	top:0;
 	left:0;
@@ -35,6 +36,14 @@ h1,h2,h3,h4,h5,h6, p, span, ul, li{
 	/*box-shadow: rgba(0,0,0,0.1) 0px 2rem 2rem;*/
 	transform-origin: top left;
 }
+
+/*.cadre:first-child{
+	background: #0F0;
+}
+
+.cadre:last-child{
+	background: #F00;
+}*/
 
 .cadre.full{
 	position: fixed;

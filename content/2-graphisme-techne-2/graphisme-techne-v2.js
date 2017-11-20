@@ -18,6 +18,8 @@ var pattern = [
 
 var coords = [];
 
+var previousKey;
+
 $(document).ready(function(){
 
 	console.log('Graphisme technè');
@@ -25,7 +27,7 @@ $(document).ready(function(){
 	startPattern = pattern.pick() ;
 	blocID = 0;
 
-	snakeInit( $('.cadre').last(), true );
+	snakeInit( $('.cadre').first(), true );
 
 
 	
@@ -41,14 +43,18 @@ $(document).ready(function(){
 
 	// if($('body').width() > 700){
 
-		prevSlide();
+		// prevSlide();
 
 		// defilement avec les touches clavier
 		$('body').keydown(function(event){
 
 			// console.log("touche n°",event.which);
 			if( event.which == 38 || event.which == 37 ){		// fleche du haut & gauche
-				prevSlide();
+				
+				// if(previousKey == 38 || previousKey == 37 ){
+				// 	prevSlide();
+				// }
+				nextSlide();
 				move(event.which );
 	            return false;
 	        }else if( event.which == 40 || event.which == 39){	// flèche du bas & droite
@@ -56,6 +62,8 @@ $(document).ready(function(){
 	        	move(event.which );
 	            return false;
 	        }
+
+	        previousKey = event.which;
 		});
 
 		$(".cadre").click(function(event){
@@ -113,10 +121,11 @@ function snakeInit(item, first){
 		// .css('top', y );
 
 		item
-		.last()
+		// .last()
 		.css('transform', 'translate('+x+'px,'+y+'px) scale(0.2)' )
 
-		coords.unshift( [x,y] );
+		// coords.unshift( [x,y] );
+		coords.push( [x,y] );
 		// console.log( coords );
 
 
@@ -126,7 +135,7 @@ function snakeInit(item, first){
 		var X = item.offset().left;
 		var Y = item.offset().top;
 
-		current = item.prev();
+		current = item.next();
 
 		// console.log(current);
 
@@ -176,16 +185,50 @@ function snakeInit(item, first){
 		current
 		.css('transform', 'translate('+X+'px,'+Y+'px) scale(0.2)' );
 
-		coords.unshift( [X,Y] );
+		// coords.unshift( [X,Y] );
+		coords.push( [X,Y] );
 
 	}
 
-	if(current.prev().hasClass("cadre")){
+	if(current.next().hasClass("cadre")){
 		blocID++;
 
 		snakeInit(current,false);
+	}else{
+		
+
+		updateZ();
+		
 	}
 
+}
+
+function updateZ( sens ){
+
+
+	if(sens == "down"){
+
+		var z = $('.cadre').length;
+
+		$('.cadre').each(function(){
+
+			$(this).css("z-index",z);
+			z--;
+
+		})
+
+	}else{
+
+		var z = 1;
+
+		$('.cadre').each(function(){
+
+			$(this).css("z-index",z);
+			z++;
+
+		})
+
+	}
 }
 
 
@@ -215,8 +258,14 @@ function nextSlide(){
 		event.preventDefault();
 	});
 
+
 	$('.caroussel').append(temp);
+
+	updateZ();
 }
+
+
+
 function prevSlide(){
 	var temp = $('.cadre').last().remove();
 
@@ -244,6 +293,8 @@ function prevSlide(){
 	});
 
 	$('.caroussel').prepend(temp);
+
+	updateZ('down');
 }
 
 function move(dir){
@@ -282,21 +333,33 @@ function move(dir){
 
 	// console.log( $('.cadre').last() , $('.cadre').last().prev() );
 
-	if(dir == 38 || dir == 37){
+	// if(dir == 38 || dir == 37){
+	// 	// prev
+	// 	X = $('.cadre').first().offset().left;
+	// 	Y = $('.cadre').first().offset().top;
+
+	// 	X += dirH;
+	// 	Y += dirV;
+
+	// 	X = X < 0 ? 0 : X;
+	// 	Y = Y < 0 ? 0 : Y;
+
+	// 	coords.unshift([X,Y]);
+	// 	coords.pop();
+
+	// 	for(var i=0; i<coords.length; i++){
+	// 		console.log(coords);
+
+	// 		console.log( "ok", coords.length - i );	
+	// 		// $('.cadre').eq( i )
+	// 		// .css('left', coords[i][0] )
+	// 		// .css('top', coords[i][1] );	
+
+	// 		$(".cadre").eq(i )
+	// 		.css('transform', 'translate('+coords[i][0]+'px,'+coords[i][1]+'px) scale(0.2)' );
+	// 	}
+	// }else{
 		// next
-		X = $('.cadre').first().offset().left;
-		Y = $('.cadre').first().offset().top;
-
-		X += dirH;
-		Y += dirV;
-
-		X = X < 0 ? 0 : X;
-		Y = Y < 0 ? 0 : Y;
-
-		coords.unshift([X,Y]);
-		coords.pop();
-	}else{
-		// prev
 		X = $('.cadre').last().prev().offset().left;
 		Y = $('.cadre').last().prev().offset().top;
 
@@ -308,21 +371,23 @@ function move(dir){
 
 		coords.push([X,Y]);
 		coords.shift();
-	}
+
+		for(var i=0; i<coords.length; i++){
+			// $('.cadre').eq( i )
+			// .css('left', coords[i][0] )
+			// .css('top', coords[i][1] );
+
+			$(".cadre").eq(i)
+			.css('transform', 'translate('+coords[i][0]+'px,'+coords[i][1]+'px) scale(0.2)' );
+		}
+	// }
 
 	// var X = X + dirH;
 	// var Y = Y + dirV;
 
 	// console.log( coords );
 
-	for(var i=0; i<coords.length; i++){
-		// $('.cadre').eq( i )
-		// .css('left', coords[i][0] )
-		// .css('top', coords[i][1] );	
-
-		$(".cadre").eq(i)
-		.css('transform', 'translate('+coords[i][0]+'px,'+coords[i][1]+'px) scale(0.2)' );
-	}
+	
 	
 	// $('.cadre').last()
 	// .css('left', X )
