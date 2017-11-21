@@ -19,8 +19,12 @@
 
 	    <?php endif; ?>
     
-        <p>de <?= $cycle->from() ?> à <?= $cycle->to() ?></h3>
-        <?php echo $cycle->text()->kirbytext() ?>
+
+        <p>de <?= strftime('%B %Y', $cycle->date(null, 'from')) ?> à <?= strftime('%B %Y', $cycle->date(null, 'to')) ?></p>
+        
+        <div>
+       		 <?php echo $cycle->text()->kirbytext() ?>
+        </div>
     </div>
     
 

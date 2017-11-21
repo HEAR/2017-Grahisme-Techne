@@ -45,3 +45,7 @@ Js: graphisme-techne-v2.js
 ----
 
 Affiche: affiche_graphisme-techne_2017-2018-recto.png
+
+----
+
+Date: 2017-11-30
