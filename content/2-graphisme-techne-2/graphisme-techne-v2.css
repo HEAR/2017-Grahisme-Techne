@@ -103,30 +103,87 @@ h1,h2,h3,h4,h5,h6, p, span, ul, li{
 	margin: 0.7em auto 0;
 }
 
+.cadre .more{
+	margin-top: 1rem;
+	font-size: 0.8rem;
+}
+
+.cadre a{
+	color: #000;
+}
+
+.cadre .more a{
+	color: #000;
+}
+
 
 .cadre .recap{
 	text-align: left;
 	column-count: 3;
 	position: absolute;
 	bottom: 1rem;
-	left: 1rem;
-	width: calc(100% - 1rem);
+	left: 2rem;
+	width: calc(100% - 4rem);
+	-webkit-column-gap: 0rem; /* Chrome, Safari, Opera */
+    -moz-column-gap: 0rem; /* Firefox */
+    column-gap: 0rem;
+    column-width: 33%;
 	/*pointer-events: none;*/
 }
 
 .cadre .recap h2{
 	break-after: column;
-	font-size:1.2rem;
+	font-size:1.3rem;
 	margin-top:-0.3em;
 	/*pointer-events: none;*/
 }
 
 .cadre .recap li{
 	font-size: 0.53rem;
+	/*background: #F00;*/
+	/*max-width: 	100%;*/
 	/*pointer-events: none;*/
 }
 
 .cadre .recap li+li{
 	margin-top: 0.07rem;
 	/*pointer-events: none;*/
+}
+
+
+.cadre .detail{
+	text-align: left;
+	display: none;
+}
+
+.cadre .detail p{
+	font-size: 0.65rem;
+	line-height: 1.35em;
+}
+
+
+.cadre .detail h1{
+	font-size: 1.5rem;
+	margin-bottom: 0.3rem;
+	text-align: center;
+}
+
+.cadre .detail h2{
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+
+.cadre .detail .resume p{
+	font-size: 0.8rem;
+}
+
+.cadre .detail .bio{
+	border-top: solid 1px #000;
+	padding-top: 0.3rem;
+	position: absolute;
+	left: 2rem;
+	right: 2rem;
+	bottom: 2rem;
 }

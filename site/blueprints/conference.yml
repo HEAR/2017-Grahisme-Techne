@@ -59,7 +59,7 @@ fields:
     width: 1/3
 
   text:
-    label: Text
+    label: Texte
     type:  textarea
 
   bio:

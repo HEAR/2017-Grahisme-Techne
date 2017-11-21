@@ -30,6 +30,18 @@ $(document).ready(function(){
 	snakeInit( $('.cadre').first(), true );
 
 
+	$(".more a").click(function(event){
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		var conf = $(this).parent().parent().parent();
+
+		conf.find( '.content' ).hide();
+		conf.find( '.detail' ).show();
+
+	})
+
 	
 
 
@@ -77,6 +89,8 @@ $(document).ready(function(){
 			}
 
 			$(".cadre").removeClass("full");
+			$( '.cadre .content' ).show();
+			$( '.cadre .detail' ).hide();
 
 			console.log($(this),"click");
 
@@ -91,6 +105,9 @@ $(document).ready(function(){
 
 		$("body").click(function(event){
 			$(".cadre").removeClass("full");
+
+			$( '.cadre .content' ).show();
+			$( '.cadre .detail' ).hide();
 		});
 
 	// }

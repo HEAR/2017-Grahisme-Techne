@@ -29,6 +29,10 @@
 			<p class="mention"><?= $mention[ $item->mention()->value() ] ?></p>
 			<p class="calendrier"><span class="jour"><?= $item->date_jour()->text() ?></span> <span class="date"><?= $item->date_nombre()->text() ?></span> <span class="mois"><?= $item->date_mois()->text() ?></span></p>
 			<p class="info"><?= $item->lieu()->html() ?></p>
+
+			<p class="more"><a href="#">En savoir plus</a></p>
+		
+
 			<div class="recap">
 				<h2>Graphisme technè</h2>
 				<ul>
@@ -43,6 +47,20 @@
 					<li>Rich Roat – 04.04.18</li>
 					<li>Pierre Ponant – 31.05.18</li>
 				</ul>
+			</div>
+
+		</div>
+
+
+		<div class="detail">
+			<h1 class="intervenant"><?= $item->intervenant()->html() ?></h1>
+			<h2 class="titre"><?= $item->title()->html() ?></h2>
+			
+			<div class="resume">
+				<?= $item->text()->kirbytext() ?>
+			</div>
+			<div class="bio">
+				<?= $item->bio()->kirbytext() ?>
 			</div>
 
 		</div>

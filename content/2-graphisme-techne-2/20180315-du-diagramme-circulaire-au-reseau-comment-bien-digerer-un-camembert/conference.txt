@@ -34,8 +34,8 @@ Recapitulatif: 1
 
 ----
 
-Text: 
+Text: La visualisation de données est la fabrication d’images fonctionnelles. Le graphisme en est donc une composante essentielle, que ce soit sur le plan de l’image qui rend visible les jeux de données ou celui de la fonction qui est de rendre lisible et intelligible. Le camembert est une technique de représentation qui nourrit les controverses mais permet de comprendre, à travers son histoire, ses usages et son ancrage culturel, comment s’articulent, se croisent ou s’opposent les enjeux fondamentaux de la visualisation de données. La popularité de ce type de diagramme et son utilisation massive dans les sphères économiques et politiques imposent également de ré échir aux manières d’apprendre, d’informer et de penser qu’implique cette technique. Face au camembert, le réseau est une autre forme de représentation qui opère un changement de paradigme. Nous l’aborderons à travers un exemple issu d’une recherche sur les réseaux de lobbying européens en matière de climat, pour constater que la visualisation de données est aussi un art de faire politique.
 
 ----
 
-Bio: 
+Bio: Fabrice Sabatier est designer graphique. Il vit et travaille à Bruxelles. Il cofonde, en 2008, le collectif de création graphique .CORP, aujourd’hui présent à Bruxelles et Saint-Étienne. Il est diplômé de l’école supérieure d’art et design de Saint-Étienne (2008) et, depuis 2013, poursuit un doctorat en Art et sciences de l’art à l’Université Libre de Bruxelles (ULB) et à l’école de recherche graphique (erg). Sa recherche s’intéresse au rôle du design dans la perception de l’économie à travers la visualisation de ses données. Il développe notamment des projets de visualisation de réseaux d’in uence dans les institutions européennes.
