@@ -18,6 +18,55 @@ h1,h2,h3,h4,h5,h6, p, span, ul, li{
 	list-style-position: inside;
 }
 
+.keyboard{
+	background: #F00;
+	width:300px;
+	height: 210px;
+	position: fixed;
+	top:50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top:-105px;
+	z-index: 50;
+	pointer-events: none;
+}
+
+
+.intro{
+	position: fixed;
+	z-index: 1;
+	padding: 1rem;
+	color: #FFF;
+	max-width:25%;
+	/*text-shadow: 1px 1px #000;*/
+}
+.intro a{
+	color: #FFF;
+}
+
+.intro h1{
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+}
+
+.intro h1 a{
+	text-decoration: none;
+}
+.intro h1 a:hover{
+	text-decoration: underline;
+}
+
+.intro h2{
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.intro p{
+	font-size:0.8rem;
+	line-height: 1.15em;
+}
+
+
 .cadre{
 	cursor:pointer;
 	position: absolute;
@@ -52,6 +101,7 @@ h1,h2,h3,h4,h5,h6, p, span, ul, li{
 	transform: translate(-50%,-50%) scale(1,1) !important;
 	z-index: 200 !important;
 	transform-origin: center center !important;
+	cursor: grab;
 }
 
 .cadre .intervenant{

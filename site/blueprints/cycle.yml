@@ -16,6 +16,10 @@ fields:
     label: Sous-titre
     type:  text
 
+  intro:
+    label: Résumé
+    type:  textarea
+
   text:
     label: Texte
     type:  textarea

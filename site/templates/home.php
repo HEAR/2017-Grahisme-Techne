@@ -12,6 +12,7 @@
 
     <div class="cycle">
         <h1><a href="<?= $cycle->url() ?>"><?= $cycle->title()->html() ?></a></h1>
+        <h2><?= $cycle->soustitre()->html() ?></h2>
 	
 		<?php if($cycle->affiche() != "") : ?>
 

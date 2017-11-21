@@ -27,6 +27,9 @@ $(document).ready(function(){
 	startPattern = pattern.pick() ;
 	blocID = 0;
 
+	$(".keyboard").delay(2000).fadeOut(1000);
+
+
 	snakeInit( $('.cadre').first(), true );
 
 
@@ -40,32 +43,18 @@ $(document).ready(function(){
 		conf.find( '.content' ).hide();
 		conf.find( '.detail' ).show();
 
-	})
-
-	
+	});
 
 
-	// $(".cadre").mouseup(function(e){
-	// 	console.log($(this),"up");
-	// });
-
-
-	// https://github.com/jquery/jquery-mousewheel/
-	// defilement avec le scroll de la souris
 
 	// if($('body').width() > 700){
 
-		// prevSlide();
 
 		// defilement avec les touches clavier
 		$('body').keydown(function(event){
 
 			// console.log("touche n°",event.which);
 			if( event.which == 38 || event.which == 37 ){		// fleche du haut & gauche
-				
-				// if(previousKey == 38 || previousKey == 37 ){
-				// 	prevSlide();
-				// }
 				nextSlide();
 				move(event.which );
 	            return false;
@@ -121,7 +110,6 @@ function snakeInit(item, first){
 
 	// console.log(startPattern);
 
-
 	if(first == true){
 
 		current = item;
@@ -132,18 +120,10 @@ function snakeInit(item, first){
 		var y = Math.random() * ( $('body').height() - $('.cadre').height()*0.2 );
 		y = Math.round(y/pasV)*pasV;
 
-		// item
-		// .last()
-		// .css('left', x )
-		// .css('top', y );
-
 		item
-		// .last()
 		.css('transform', 'translate('+x+'px,'+y+'px) scale(0.2)' )
 
-		// coords.unshift( [x,y] );
 		coords.push( [x,y] );
-		// console.log( coords );
 
 
 	}else{
@@ -153,11 +133,6 @@ function snakeInit(item, first){
 		var Y = item.offset().top;
 
 		current = item.next();
-
-		// console.log(current);
-
-		// var directions = ["T","R","B","L"];
-		// var dir = directions[Math.floor(Math.random() * directions.length)];
 
 		dir = startPattern[ blocID ];
 
@@ -193,18 +168,11 @@ function snakeInit(item, first){
 
 		X = X + dirH ;
 		Y = Y + dirV ;
-		
-
-		// current
-		// .css('left', X )
-		// .css('top', Y );
 
 		current
 		.css('transform', 'translate('+X+'px,'+Y+'px) scale(0.2)' );
 
-		// coords.unshift( [X,Y] );
 		coords.push( [X,Y] );
-
 	}
 
 	if(current.next().hasClass("cadre")){
@@ -212,12 +180,8 @@ function snakeInit(item, first){
 
 		snakeInit(current,false);
 	}else{
-		
-
 		updateZ();
-		
 	}
-
 }
 
 function updateZ( sens ){
@@ -263,14 +227,27 @@ function nextSlide(){
 		}
 
 		$(".cadre").removeClass("full");
-
-		console.log($(this),"click");
+		$( '.cadre .content' ).show();
+		$( '.cadre .detail' ).hide();
 
 		if( !full ){
 			$(this).addClass("full");	
 		}else{
 
 		}
+
+		temp.find(".more a").click(function(event){
+
+			event.preventDefault();
+			event.stopPropagation();
+
+			var conf = $(this).parent().parent().parent();
+
+			conf.find( '.content' ).hide();
+			conf.find( '.detail' ).show();
+
+		});
+
 	}).children().click(function(event) {
 		event.preventDefault();
 	});
@@ -297,14 +274,27 @@ function prevSlide(){
 		}
 
 		$(".cadre").removeClass("full");
-
-		console.log($(this),"click");
+		$( '.cadre .content' ).show();
+		$( '.cadre .detail' ).hide();
 
 		if( !full ){
 			$(this).addClass("full");	
 		}else{
 
 		}
+
+		temp.find(".more a").click(function(event){
+
+			event.preventDefault();
+			event.stopPropagation();
+
+			var conf = $(this).parent().parent().parent();
+
+			conf.find( '.content' ).hide();
+			conf.find( '.detail' ).show();
+
+		});
+
 	}).children().click(function(event) {
 		event.preventDefault();
 	});
@@ -348,67 +338,26 @@ function move(dir){
 		break;
 	}
 
-	// console.log( $('.cadre').last() , $('.cadre').last().prev() );
 
-	// if(dir == 38 || dir == 37){
-	// 	// prev
-	// 	X = $('.cadre').first().offset().left;
-	// 	Y = $('.cadre').first().offset().top;
+	X = $('.cadre').last().prev().offset().left;
+	Y = $('.cadre').last().prev().offset().top;
 
-	// 	X += dirH;
-	// 	Y += dirV;
+	X += dirH;
+	Y += dirV;
 
-	// 	X = X < 0 ? 0 : X;
-	// 	Y = Y < 0 ? 0 : Y;
+	X = X < 0 ? 0 : X;
+	Y = Y < 0 ? 0 : Y;
 
-	// 	coords.unshift([X,Y]);
-	// 	coords.pop();
+	coords.push([X,Y]);
+	coords.shift();
 
-	// 	for(var i=0; i<coords.length; i++){
-	// 		console.log(coords);
+	for(var i=0; i<coords.length; i++){
+		
 
-	// 		console.log( "ok", coords.length - i );	
-	// 		// $('.cadre').eq( i )
-	// 		// .css('left', coords[i][0] )
-	// 		// .css('top', coords[i][1] );	
-
-	// 		$(".cadre").eq(i )
-	// 		.css('transform', 'translate('+coords[i][0]+'px,'+coords[i][1]+'px) scale(0.2)' );
-	// 	}
-	// }else{
-		// next
-		X = $('.cadre').last().prev().offset().left;
-		Y = $('.cadre').last().prev().offset().top;
-
-		X += dirH;
-		Y += dirV;
-
-		X = X < 0 ? 0 : X;
-		Y = Y < 0 ? 0 : Y;
-
-		coords.push([X,Y]);
-		coords.shift();
-
-		for(var i=0; i<coords.length; i++){
-			// $('.cadre').eq( i )
-			// .css('left', coords[i][0] )
-			// .css('top', coords[i][1] );
-
-			$(".cadre").eq(i)
-			.css('transform', 'translate('+coords[i][0]+'px,'+coords[i][1]+'px) scale(0.2)' );
-		}
-	// }
-
-	// var X = X + dirH;
-	// var Y = Y + dirV;
-
-	// console.log( coords );
-
+		$(".cadre").eq(i)
+		.css('transform', 'translate('+coords[i][0]+'px,'+coords[i][1]+'px) scale(0.2)' );
+	}
 	
-	
-	// $('.cadre').last()
-	// .css('left', X )
-	// .css('top', Y );	
 
 	window.scrollTo(document.body.scrollWidth, document.body.scrollHeight);
 

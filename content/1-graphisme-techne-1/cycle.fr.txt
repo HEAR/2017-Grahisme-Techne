@@ -1,4 +1,4 @@
-Title: Graphisme techné 1
+Title: Graphisme techné
 
 ----
 
@@ -18,4 +18,16 @@ Javascript: http://localhost:8888/2017-Grahisme-Techne/content/1-graphisme-techn
 
 ----
 
-Css: http://localhost:8888/2017-Grahisme-Techne/content/1-graphisme-techne-1/index.css
+Css: 
+
+----
+
+Soustitre: 
+
+----
+
+Affiche: 
+
+----
+
+Js: 
