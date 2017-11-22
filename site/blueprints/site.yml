@@ -3,6 +3,8 @@ title: Site
 pages:
   template:
     - cycle
+  sort: from desc
+  num: date
 
 
 fields:

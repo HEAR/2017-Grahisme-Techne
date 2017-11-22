@@ -1,36 +1,50 @@
 <?php snippet('header') ?>
 
 
-<div class="cycles">
-    
+<div class="home">
+	<h1 class="site-title"><?= $site->title()->html() ?></h1>
 
-    <?php 
+	<div class="description">
+		<p><?= $site->description()->kirbytext() ?></p>
+	</div>
 
-    $i = 0;
-    foreach($pages->visible() as $cycle): ?>
-      
+	<div class="cycles">
+	    
 
-    <div class="cycle">
-        <h1><a href="<?= $cycle->url() ?>"><?= $cycle->title()->html() ?></a></h1>
-        <h2><?= $cycle->soustitre()->html() ?></h2>
-	
-		<?php if($cycle->affiche() != "") : ?>
+	    <?php 
 
-        <div class="affiche"><a href="<?= $cycle->url() ?>"><img src="<?= $cycle->url().'/'.$cycle->affiche() ?>"></a></div>
+	    $i = 0;
+	    foreach($pages->visible()->sortBy('date', 'desc') as $cycle): ?>
+	      
 
-	    <?php endif; ?>
-    
+	    <div class="cycle">
+	        <h1><a href="<?= $cycle->url() ?>"><?= $cycle->title()->html() ?></a></h1>
+	        <h2><?= $cycle->soustitre()->html() ?></h2>
+	        <h3><?= strftime('%B %Y', $cycle->date(null, 'from')) ?> • <?= strftime('%B %Y', $cycle->date(null, 'to')) ?></h3>
+			<div class="more"><a href="<?= $cycle->url() ?>">Plus d'informations</a></div>
 
-        <p>de <?= strftime('%B %Y', $cycle->date(null, 'from')) ?> à <?= strftime('%B %Y', $cycle->date(null, 'to')) ?></p>
-        
-        <div>
-       		 <?php echo $cycle->text()->kirbytext() ?>
-        </div>
-    </div>
-    
+			<?php if($cycle->affiche() != "") : ?>
 
-    <?php endforeach ?>
+	        <div class="affiche"><a href="<?= $cycle->url() ?>"><img src="<?= $cycle->url().'/'.$cycle->affiche() ?>"></a></div>
+
+		    <?php endif; ?>
+	    
+
+	        
+	        
+	        <div>
+	       		 <?php echo $cycle->text()->kirbytext() ?>
+	        </div>
+	    </div>
+	    
+
+	    <?php endforeach ?>
+	</div>
+
+	<p><?= $site->copyright()->kirbytext() ?></p>
 </div>
+
+
 
 
 

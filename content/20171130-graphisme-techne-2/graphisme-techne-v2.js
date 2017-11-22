@@ -31,6 +31,7 @@ $(document).ready(function(){
 
 
 	snakeInit( $('.cadre').first(), true );
+	window.scrollTo(document.body.scrollWidth, document.body.scrollHeight);
 
 
 	$(".more a").click(function(event){

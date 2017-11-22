@@ -1,0 +1,54 @@
+Title: Outils et projets conviviaux
+
+----
+
+Year: 
+
+----
+
+Text: 
+
+----
+
+Intervenant: Sarah Garcin
+
+----
+
+Date: 
+
+----
+
+Date-jour: 
+
+----
+
+Date-nombre: 
+
+----
+
+Date-mois: 
+
+----
+
+Mention: aucune
+
+----
+
+Lieu: 
+
+----
+
+Recapitulatif: 0
+
+----
+
+Bio: 
+
+Diplômée de l’École nationale supérieure des arts décoratifs de Paris, Sarah Garcin est designer graphique et designer d’interaction. Elle travaille au sein du collectif g-u-i (Bachir Soussi Chiadmi, Angeline Ostinelli, Julien Gargot, Benoît Verjat et Nicolas Couturier), un studio de designers qui travaille sur des projets éditoriaux, d’identité graphique, de sites web et d’installations interactives.
+Elle s’intéresse particulièrement à la question des outils, de la documentation, et elle est impliquée dans la communauté du logiciel libre. Elle a d’ailleurs créé, avec Raphaël Bastide et Bachir Soussi Chiadmi, l’association OLA (Outils libres alternatif), qui organise des workshops sur les logiciels libres pour la création.
+Elle participe également à des projets de recherche, dans lesquels elle développe des outils de documentation pour l’apprentissage et le partage
+de connaissances.
+
+----
+
+Player: 0

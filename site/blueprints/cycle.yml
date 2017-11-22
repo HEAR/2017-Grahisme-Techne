@@ -4,7 +4,7 @@ pages:
   # sortable: true
   template:
     - conference
-  sort: date asc
+  sort: date desc
   num: date
 
 fields:
@@ -24,7 +24,7 @@ fields:
     label: Texte
     type:  textarea
 
-  from:
+  date:
     label: Date de début
     type: date
     width: 1/2

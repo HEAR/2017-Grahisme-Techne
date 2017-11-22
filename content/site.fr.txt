@@ -1,4 +1,4 @@
-Title: Graphisme Technè
+Title: Design graphique, design critique
 
 ----
 
@@ -6,8 +6,8 @@ Author: Atelier de communication graphique, HEAR
 
 ----
 
-Description: This is Kirby's Starterkit.
+Description: Cycles de conférences organisés par le master Design de l’université de Strasbourg et l’atelier de Communication graphique de la Haute école des arts du Rhin.
 
 ----
 
-Copyright: © 2009–(date: Year) (link: http://getkirby.com text: The Kirby Team)
+Copyright: © 2005–(date: Year)
