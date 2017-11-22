@@ -14,7 +14,7 @@ Intervenant: Jean-Noël Lafargue
 
 ----
 
-Date: 
+Date: 2015-11-26
 
 ----
 
@@ -22,11 +22,11 @@ Date-jour:
 
 ----
 
-Date-nombre: 
+Date-nombre: 26
 
 ----
 
-Date-mois: 
+Date-mois: novembre
 
 ----
 
@@ -34,7 +34,7 @@ Mention: aucune
 
 ----
 
-Lieu: 
+Lieu: Auditorium HEAR à Strasbourg — 18h
 
 ----
 

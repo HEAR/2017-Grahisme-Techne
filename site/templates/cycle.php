@@ -132,9 +132,9 @@
 	$i = 0;
 	foreach($page->children()->visible() as $item): ?>
 
-	<div id="bloc conf<?php echo $i++; ?>" class="cadre" data-date="<?= $item->date() ?>">
+	<div id="conf<?php echo $i++; ?>" class="bloc cadre" data-date="<?= $item->date() ?>">
 
-		<div class="colorBlock"></div>
+		
 		<div class="content">
 			<!-- <h1><?= $item->title()->html() ?></h1>
 			<h3><?= $item->date() ?></h3>

@@ -26,7 +26,7 @@ Javascript: http://localhost:8888/2017-Grahisme-Techne/content/1-graphisme-techn
 
 ----
 
-Css: 
+Css: graphisme-techne-v1.css
 
 ----
 
@@ -38,7 +38,7 @@ Affiche:
 
 ----
 
-Js: 
+Js: graphisme-techne-v1.js
 
 ----
 

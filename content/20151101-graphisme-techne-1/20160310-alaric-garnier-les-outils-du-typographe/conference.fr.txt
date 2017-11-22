@@ -14,7 +14,7 @@ Intervenant: Alaric Garnier
 
 ----
 
-Date: 
+Date: 2016-03-10
 
 ----
 
@@ -22,11 +22,11 @@ Date-jour:
 
 ----
 
-Date-nombre: 
+Date-nombre: 10
 
 ----
 
-Date-mois: 
+Date-mois: mars
 
 ----
 
@@ -34,7 +34,7 @@ Mention: aucune
 
 ----
 
-Lieu: 
+Lieu: Auditorium HEAR à Strasbourg — 18h
 
 ----
 

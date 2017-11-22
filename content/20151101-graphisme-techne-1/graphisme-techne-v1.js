@@ -2,6 +2,8 @@ $(document).ready(function(){
 
 		console.log('Graphisme technè');
 
+		$(".bloc").prepend("<div class='colorBlock'></div>");
+
 		// https://github.com/jquery/jquery-mousewheel/
 		// defilement avec le scroll de la souris
 
@@ -60,10 +62,10 @@ $(document).ready(function(){
 	})
 
 	function nextSlide(){
-		var test = $('.cadre:last').remove();
-		$('.caroussel').prepend(test);
-	}
-	function prevSlide(){
 		var test = $('.cadre:first').remove();
 		$('.caroussel').append(test);
+	}
+	function prevSlide(){
+		var test = $('.cadre:last').remove();
+		$('.caroussel').prepend(test);
 	}

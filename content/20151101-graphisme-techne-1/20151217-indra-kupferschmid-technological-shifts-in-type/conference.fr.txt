@@ -22,7 +22,7 @@ Intervenant: Indra Kupferschmid
 
 ----
 
-Date: 
+Date: 2015-12-17
 
 ----
 
@@ -30,11 +30,11 @@ Date-jour:
 
 ----
 
-Date-nombre: 
+Date-nombre: 17
 
 ----
 
-Date-mois: 
+Date-mois: décembre
 
 ----
 
@@ -42,7 +42,7 @@ Mention: aucune
 
 ----
 
-Lieu: 
+Lieu: Salle 119 Palais universitaire — 18h
 
 ----
 
