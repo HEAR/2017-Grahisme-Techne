@@ -44,6 +44,13 @@ Js: graphisme-techne-v1.js
 
 Intro: 
 
+Le design graphique a souvent été réduit à ses aspects formels et technologiques, entérinant la réduction bien connue du faire-savoir au savoir-faire. Il s’agira, à l’occasion de ce cycle de conférences, de prendre ces notions à rebours, en les mettant en perspective avec les déterminants historiques et culturels qui les traversent. Si les conséquences de l’invention de l’imprimerie ont bien été étudiées et questionnées, la révolution industrielle, ou encore la transition des années 1980 accompagnée de la fin des récits que la modernité mettait en concurrence, ne laissent désormais plus de doutes sur les effets politiques du passage d’un système technologique à un autre. Il est alors possible de s’interroger sur des processus aussi différents que la démocratisation et la standardisation des outils, la capitalisation des savoirs liée aux médias, la perte du monopole technique autrefois détenu par les designers, les métamorphoses économiques qui accompagnent les processus techniques initiés par le design graphique.
+En donnant la parole à des graphistes, des théoriciens ou des historiens, ce cycle vise à donner de nouveaux éclairages sur ces questions, comme en contrepoint à la définition que donnait Ellen Lupton du designer-producteur, engagé dans le réseau de plus en plus complexe des processus de production propres au design graphique.
+
 ----
 
 Date: 2015-11-01
+
+----
+
+Conf-order: desc

@@ -130,7 +130,7 @@
 	<?php 
 
 	$i = 0;
-	foreach($page->children()->visible() as $item): ?>
+	foreach($page->children()->visible()->sortBy('date',  $page->conf_order()->value() ) as $item): ?>
 
 	<div id="conf<?php echo $i++; ?>" class="bloc cadre" data-date="<?= $item->date() ?>">
 

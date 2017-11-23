@@ -62,10 +62,10 @@ $(document).ready(function(){
 	})
 
 	function nextSlide(){
-		var test = $('.cadre:first').remove();
-		$('.caroussel').append(test);
+		var bloc = $('.bloc:last').remove();
+		$('.caroussel').prepend(bloc);
 	}
 	function prevSlide(){
-		var test = $('.cadre:last').remove();
-		$('.caroussel').prepend(test);
+		var bloc = $('.bloc:first').remove();
+		$('.caroussel').append(bloc);
 	}

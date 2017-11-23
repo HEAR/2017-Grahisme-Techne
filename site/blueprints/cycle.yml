@@ -24,15 +24,24 @@ fields:
     label: Texte
     type:  textarea
 
+  conf_order:
+    label: Ordre des conférences
+    type: select
+    default: asc
+    options:
+      asc: croissant
+      desc: decroissant
+    width: 1/3
+
   date:
     label: Date de début
     type: date
-    width: 1/2
+    width: 1/3
 
   to:
     label: Date de fin
     type: date
-    width: 1/2
+    width: 1/3
 
   affiche:
     label: Affiche

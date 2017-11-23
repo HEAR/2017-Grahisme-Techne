@@ -62,7 +62,7 @@ body{
 	font-size:20px;
 }
 
-.cadre{
+.bloc{
 	position: fixed;
 	box-sizing: border-box;
 	padding: 0.2rem 1rem;
@@ -70,7 +70,7 @@ body{
 	/*border: solid 1px #AAA;*/
 }
 
-.cadre .colorBlock{
+.bloc .colorBlock{
 	position: absolute;
 	top:1.8rem;
 	left: 1.85rem;
@@ -78,7 +78,7 @@ body{
 	bottom: 0;
 }
 
-.cadre .content{
+.bloc .content{
 	position: relative;
 
 }
@@ -128,70 +128,70 @@ body{
 
 
 /* POSITIONNEMENT RELATIF DES BLOCS */
-.cadre{
+.bloc{
 	top:    0%;
 	left:   0%;
 	right:  0%;
 	bottom: 0%;
 	font-size:1.9em;
 }
-.cadre+.cadre{
+.bloc+.bloc{
 	top:    1.5rem;
 	left:   2.5%;
 	right:  0%;
 	bottom: 0%;
 	font-size:1.8em;
 }
-.cadre+.cadre+.cadre{
+.bloc+.bloc+.bloc{
 	top:    3rem;
 	left:   5%;
 	right:  0%;
 	bottom: 0%;
 	font-size:1.7em;
 }
-.cadre+.cadre+.cadre+.cadre{
+.bloc+.bloc+.bloc+.bloc{
 	top:    4.5rem;
 	left:   7.5%;
 	right:  0%;
 	bottom: 0%;
 	font-size:1.6em;
 }
-.cadre+.cadre+.cadre+.cadre+.cadre{
+.bloc+.bloc+.bloc+.bloc+.bloc{
 	top:    6rem;
 	left:   10%;
 	right:  0%;
 	bottom: 0%;
 	font-size:1.5em;
 }
-.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc{
 	top:    7.5rem;
 	left:   12.5%;
 	right:  0%;
 	bottom: 0%;
 	font-size:1.4em;
 }
-.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc{
 	top:    9rem;
 	left:   15%;
 	right:  0%;
 	bottom: 0%;
 	font-size:1.3em;
 }
-.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc{
 	top:    10.5rem;
 	left:   17.5%;
 	right:  0%;
 	bottom: 0%;
 	font-size:1.2em;
 }
-.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc{
 	top:    12rem;
 	left:   20%;
 	right:  0%;
 	bottom: 0%;
 	font-size:1.1em;
 }
-.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre+.cadre{
+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc+.bloc{
 	top:    13.5rem;
 	left:   22.5%;
 	right:  0%;
@@ -200,7 +200,7 @@ body{
 	/*background: #FFF!important;*/
 }
 
-.caroussel .cadre:last-child{
+.caroussel .bloc:last-child{
 	position: absolute;
 	bottom: auto;
 	height: auto;
@@ -208,6 +208,23 @@ body{
 
 
 /* CONTENU */
+
+.intro h1{
+	font-size: 3em;
+}
+.intro h2{
+	
+	font-size: 3em;
+	margin-bottom: 1rem;
+}
+.intro a{
+	color: #000;
+	text-decoration: none;
+}
+.intro a:hover{
+	text-decoration: underline;
+}
+
 
 .content{
 	max-width: 900px;
@@ -261,7 +278,11 @@ body{
 
 @media screen and (max-width: 700px){
 
-	.cadre{
+	.keyboard{
+		display: none;
+	}
+
+	.bloc{
 		position: relative;
 		width:100% !important;
 		min-height: 50% !important;

@@ -57,3 +57,7 @@ Date: 2017-11-30
 ----
 
 Intro: Cycle de conférences organisé par le master Design de l’Université de Strasbourg, les ateliers de Communication graphique et Didactique visuelle de la Haute école des arts du Rhin et les Musées de la ville de Strasbourg (link: www.designgraphiquedesigncritique.com text: www.designgraphiquedesigncritique.com)
+
+----
+
+Conf-order: asc
