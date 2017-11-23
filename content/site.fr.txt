@@ -10,4 +10,4 @@ Description: Cycles de conférences organisés par le master Design de l’unive
 
 ----
 
-Copyright: © 2005–(date: Year)
+Copyright: © 2015–(date: Year)

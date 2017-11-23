@@ -120,3 +120,24 @@ body{
 	max-width:100%;
 }
 
+div.footer{
+	margin-top: 1rem;
+}
+
+div.footer p{
+	font-size: 0.5rem;
+}
+
+@media screen and (max-width: 700px){
+	body{
+		padding:1rem;
+	}
+
+	.home .cycle{
+		margin-top: 1rem;
+	}
+
+	
+
+}
+

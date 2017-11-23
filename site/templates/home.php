@@ -41,7 +41,11 @@
 	    <?php endforeach ?>
 	</div>
 
-	<p><?= $site->copyright()->kirbytext() ?></p>
+	
+	<div class="footer">
+		<?= $site->copyright()->kirbytext() ?>
+		<?= $site->author()->kirbytext() ?>	
+	</div>
 </div>
 
 

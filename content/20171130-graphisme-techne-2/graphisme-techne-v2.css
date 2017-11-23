@@ -239,3 +239,82 @@ h1,h2,h3,h4,h5,h6, p, span, ul, li{
 	right: 2rem;
 	bottom: 2rem;
 }
+
+
+@media screen and (max-width: 700px){
+
+	html, body{
+		height: auto;
+		font-size:4vmin;
+	}
+
+	body{
+		overflow: auto;
+		margin: 2rem;
+	}
+
+	.keyboard{
+		display: none;
+	}
+
+	.intro{
+		position: static;
+		width: auto;
+	}
+
+	.cadre{
+		position: static !important;
+		width:100% !important;
+		min-height: 50% !important;
+		height: auto !important;
+		margin: 2rem 0 !important;
+		font-size:1rem !important;
+		top:auto;
+		left:auto;
+		transform: none !important;
+	}
+
+	.cadre.full{
+		position: static !important;
+		top:auto;
+		left:auto;
+		transform: none !important;
+		z-index: auto !important;
+		transform-origin: center center !important;
+		cursor: auto;
+	}
+
+	.cadre .content{
+		display: block !important;
+	}
+
+	.cadre .more{
+		display: none;
+	}
+
+	.cadre .recap{
+		position: static !important;
+		margin: 1rem 0;
+		display: none;
+	}
+
+	.cadre .detail{
+		display: block !important;
+		margin: 1rem 0;
+	}
+
+	.cadre .detail h1, .cadre .detail h2{
+		display: none;
+	}
+
+	.cadre .detail .bio{
+		border-top: solid 1px #000;
+		margin-top: 1rem;
+		padding-top: 0.3rem;
+		position: static;
+		left: 2rem;
+		right: 2rem;
+		bottom: 2rem;
+	}
+
+}

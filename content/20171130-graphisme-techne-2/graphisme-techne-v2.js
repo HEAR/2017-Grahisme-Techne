@@ -24,31 +24,51 @@ $(document).ready(function(){
 
 	console.log('Graphisme technè');
 
+	bodyW = $('body').width() ;
+	maxBodyW = 700;
+
+	if(bodyW > maxBodyW){
+		layoutLarge = true;
+	}else{
+		layoutLarge = false;
+	}
+
 	startPattern = pattern.pick() ;
 	blocID = 0;
 
-	$(".keyboard").delay(2000).fadeOut(1000);
+	if( layoutLarge ){
+		$(".keyboard").delay(2000).fadeOut(1000);
 
 
-	snakeInit( $('.cadre').first(), true );
-	window.scrollTo(document.body.scrollWidth, document.body.scrollHeight);
+		snakeInit( $('.cadre').first(), true );
+		window.scrollTo(document.body.scrollWidth, document.body.scrollHeight);
+
+		$(".more a").click(function(event){
+
+			event.preventDefault();
+			event.stopPropagation();
+
+			var conf = $(this).parent().parent().parent();
+
+			conf.find( '.content' ).hide();
+			conf.find( '.detail' ).show();
+
+		});
 
 
-	$(".more a").click(function(event){
+	}else{
+		$(".keyboard").hide();
+	}
 
-		event.preventDefault();
-		event.stopPropagation();
+	
+	
 
-		var conf = $(this).parent().parent().parent();
 
-		conf.find( '.content' ).hide();
-		conf.find( '.detail' ).show();
-
-	});
+	
 
 
 
-	// if($('body').width() > 700){
+	if(layoutLarge){
 
 
 		// defilement avec les touches clavier
@@ -100,7 +120,7 @@ $(document).ready(function(){
 			$( '.cadre .detail' ).hide();
 		});
 
-	// }
+	}
 })
 
 function snakeInit(item, first){
@@ -186,181 +206,202 @@ function snakeInit(item, first){
 }
 
 function updateZ( sens ){
+	if(layoutLarge){
 
+		if(sens == "down"){
 
-	if(sens == "down"){
+			var z = $('.cadre').length;
 
-		var z = $('.cadre').length;
+			$('.cadre').each(function(){
 
-		$('.cadre').each(function(){
+				$(this).css("z-index",z);
+				z--;
 
-			$(this).css("z-index",z);
-			z--;
+			})
 
-		})
+		}else{
 
-	}else{
+			var z = 1;
 
-		var z = 1;
+			$('.cadre').each(function(){
 
-		$('.cadre').each(function(){
+				$(this).css("z-index",z);
+				z++;
 
-			$(this).css("z-index",z);
-			z++;
+			})
 
-		})
-
+		}
 	}
 }
 
 
 function nextSlide(){
-	var temp = $('.cadre').first().remove();
+	if(layoutLarge){
+		var temp = $('.cadre').first().remove();
 
-	temp.click(function(event){
+		temp.click(function(event){
 
-		event.stopPropagation();
-
-		if( $(this).hasClass("full") ){
-			full = true;
-		}else{
-			full = false;
-		}
-
-		$(".cadre").removeClass("full");
-		$( '.cadre .content' ).show();
-		$( '.cadre .detail' ).hide();
-
-		if( !full ){
-			$(this).addClass("full");	
-		}else{
-
-		}
-
-		temp.find(".more a").click(function(event){
-
-			event.preventDefault();
 			event.stopPropagation();
 
-			var conf = $(this).parent().parent().parent();
+			if( $(this).hasClass("full") ){
+				full = true;
+			}else{
+				full = false;
+			}
 
-			conf.find( '.content' ).hide();
-			conf.find( '.detail' ).show();
+			$(".cadre").removeClass("full");
+			$( '.cadre .content' ).show();
+			$( '.cadre .detail' ).hide();
 
+			if( !full ){
+				$(this).addClass("full");	
+			}else{
+
+			}
+
+			temp.find(".more a").click(function(event){
+
+				event.preventDefault();
+				event.stopPropagation();
+
+				var conf = $(this).parent().parent().parent();
+
+				conf.find( '.content' ).hide();
+				conf.find( '.detail' ).show();
+
+			});
+
+		}).children().click(function(event) {
+			event.preventDefault();
 		});
 
-	}).children().click(function(event) {
-		event.preventDefault();
-	});
 
+		$('.caroussel').append(temp);
 
-	$('.caroussel').append(temp);
-
-	updateZ();
+		updateZ();
+	}
 }
 
 
 
 function prevSlide(){
-	var temp = $('.cadre').last().remove();
 
-	temp.click(function(event){
+	if(layoutLarge){
+		var temp = $('.cadre').last().remove();
 
-		event.stopPropagation();
+		temp.click(function(event){
 
-		if( $(this).hasClass("full") ){
-			full = true;
-		}else{
-			full = false;
-		}
-
-		$(".cadre").removeClass("full");
-		$( '.cadre .content' ).show();
-		$( '.cadre .detail' ).hide();
-
-		if( !full ){
-			$(this).addClass("full");	
-		}else{
-
-		}
-
-		temp.find(".more a").click(function(event){
-
-			event.preventDefault();
 			event.stopPropagation();
 
-			var conf = $(this).parent().parent().parent();
+			if( $(this).hasClass("full") ){
+				full = true;
+			}else{
+				full = false;
+			}
 
-			conf.find( '.content' ).hide();
-			conf.find( '.detail' ).show();
+			$(".cadre").removeClass("full");
+			$( '.cadre .content' ).show();
+			$( '.cadre .detail' ).hide();
 
+			if( !full ){
+				$(this).addClass("full");	
+			}else{
+
+			}
+
+			temp.find(".more a").click(function(event){
+
+				event.preventDefault();
+				event.stopPropagation();
+
+				var conf = $(this).parent().parent().parent();
+
+				conf.find( '.content' ).hide();
+				conf.find( '.detail' ).show();
+
+			});
+
+		}).children().click(function(event) {
+			event.preventDefault();
 		});
 
-	}).children().click(function(event) {
-		event.preventDefault();
-	});
+		$('.caroussel').prepend(temp);
 
-	$('.caroussel').prepend(temp);
-
-	updateZ('down');
+		updateZ('down');
+	}
 }
 
 function move(dir){
 
 	// console.log(coords);
 
-	var coef = 2;
-	var pasH = 52/coef;
-	var pasV = pasH;
+	if(layoutLarge){
 
-	rPasV = Math.ceil(Math.random()*coef) * pasV;
-	rPasH = Math.ceil(Math.random()*coef) * pasH;
-	
-	switch(dir){
-		case 38 : // haut // next
-			dirH = -rPasH;
-			dirV = -rPasV;
-		break;
-		case 39 : // droite // Prev
-			dirH = rPasH;
-			dirV = -rPasV;
-		break;
-		case 40 : // bas // prev
-			dirH = rPasH;
-			dirV = rPasV;
-		break;
-		case 37 : // gauche // next 
-			dirH = -rPasH;
-			dirV = rPasV;
-		break;
-		default:
-			dirH = rPasH;
-			dirV = rPasV;
-		break;
-	}
+		var coef = 2;
+		var pasH = 52/coef;
+		var pasV = pasH;
+
+		rPasV = Math.ceil(Math.random()*coef) * pasV;
+		rPasH = Math.ceil(Math.random()*coef) * pasH;
+		
+		switch(dir){
+			case 38 : // haut // next
+				dirH = -rPasH;
+				dirV = -rPasV;
+			break;
+			case 39 : // droite // Prev
+				dirH = rPasH;
+				dirV = -rPasV;
+			break;
+			case 40 : // bas // prev
+				dirH = rPasH;
+				dirV = rPasV;
+			break;
+			case 37 : // gauche // next 
+				dirH = -rPasH;
+				dirV = rPasV;
+			break;
+			default:
+				dirH = rPasH;
+				dirV = rPasV;
+			break;
+		}
 
 
-	X = $('.cadre').last().prev().offset().left;
-	Y = $('.cadre').last().prev().offset().top;
+		X = $('.cadre').last().prev().offset().left;
+		Y = $('.cadre').last().prev().offset().top;
 
-	X += dirH;
-	Y += dirV;
+		X += dirH;
+		Y += dirV;
 
-	X = X < 0 ? 0 : X;
-	Y = Y < 0 ? 0 : Y;
+		X = X < 0 ? 0 : X;
+		Y = Y < 0 ? 0 : Y;
 
-	coords.push([X,Y]);
-	coords.shift();
+		coords.push([X,Y]);
+		coords.shift();
 
-	for(var i=0; i<coords.length; i++){
+		for(var i=0; i<coords.length; i++){
+			
+
+			$(".cadre").eq(i)
+			.css('transform', 'translate('+coords[i][0]+'px,'+coords[i][1]+'px) scale(0.2)' );
+		}
 		
 
-		$(".cadre").eq(i)
-		.css('transform', 'translate('+coords[i][0]+'px,'+coords[i][1]+'px) scale(0.2)' );
+		window.scrollTo(document.body.scrollWidth, document.body.scrollHeight);
 	}
-	
-
-	window.scrollTo(document.body.scrollWidth, document.body.scrollHeight);
-
-
 }
+
+
+$( window ).resize(function() {
+
+	bodyW = $('body').width() ;
+
+	console.log( bodyW );
+
+	if(bodyW > maxBodyW){
+		layoutLarge = true;
+	}else{
+		layoutLarge = false;
+	}
+});
