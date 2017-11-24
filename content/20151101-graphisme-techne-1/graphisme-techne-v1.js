@@ -4,6 +4,8 @@ $(document).ready(function(){
 
 		$(".bloc").prepend("<div class='colorBlock'></div>");
 
+		$(".keyboard").delay(2000).fadeOut(1000);
+
 		// https://github.com/jquery/jquery-mousewheel/
 		// defilement avec le scroll de la souris
 
